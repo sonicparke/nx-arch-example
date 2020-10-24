@@ -48,6 +48,12 @@
     },
     "app1-user-management-list-users": {
       "tags": []
+    },
+    "app1-user-management-home": {
+      "tags": []
+    },
+    "app1-home-feature-shell": {
+      "tags": []
     }
   }
 }

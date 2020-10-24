@@ -25,6 +25,12 @@
       ],
       "@nx-arch-example/app1/user-management/list-users": [
         "libs/app1/user-management/list-users/src/index.ts"
+      ],
+      "@nx-arch-example/app1/users/home": [
+        "libs/app1/user-management/home/src/index.ts"
+      ],
+      "@nx-arch-example/app1/home/feature-shell": [
+        "libs/app1/home/feature-shell/src/index.ts"
       ]
     }
   },

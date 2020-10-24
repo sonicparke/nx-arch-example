@@ -5,13 +5,18 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'user-management',
+    redirectTo: 'home',
     pathMatch: 'full',
-    data: { allowIfAuthenticated: false },
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('@nx-arch-example/app1/home/feature-shell').then(
+        (module) => module.App1HomeFeatureShellModule
+      ),
   },
   {
     path: 'user-management',
-    data: { allowIfAuthenticated: false },
     loadChildren: () =>
       import('@nx-arch-example/app1/users/feature-shell').then(
         (module) => module.App1UserManagementFeatureShellModule
@@ -19,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'user-management',
+    redirectTo: 'home',
   },
 ];
 
