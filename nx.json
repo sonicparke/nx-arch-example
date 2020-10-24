@@ -39,6 +39,9 @@
     },
     "shared-utils": {
       "tags": []
+    },
+    "app1-user-management-feature-shell": {
+      "tags": []
     }
   }
 }

@@ -16,7 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-arch-example/shared/utils": ["libs/shared/utils/src/index.ts"]
+      "@nx-arch-example/shared/utils": ["libs/shared/utils/src/index.ts"],
+      "@nx-arch-example/app1/users/feature-shell": [
+        "libs/app1/user-management/feature-shell/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
