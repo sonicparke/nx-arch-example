@@ -4,8 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class RolesService {
-  constructor() {}
-
   public getRoles(): string[] {
     return ['admin', 'user'];
   }
