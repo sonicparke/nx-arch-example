@@ -42,6 +42,9 @@
     },
     "app1-user-management-feature-shell": {
       "tags": []
+    },
+    "app1-user-management-data-access": {
+      "tags": []
     }
   }
 }

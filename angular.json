@@ -304,6 +304,46 @@
           "style": "scss"
         }
       }
+    },
+    "app1-user-management-data-access": {
+      "projectType": "library",
+      "root": "libs/app1/user-management/data-access",
+      "sourceRoot": "libs/app1/user-management/data-access/src",
+      "prefix": "nx-arch-example",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/app1/user-management/data-access/tsconfig.lib.json",
+            "project": "libs/app1/user-management/data-access/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/app1/user-management/data-access/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app1/user-management/data-access/src/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/app1/user-management/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
