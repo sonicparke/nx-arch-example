@@ -31,6 +31,15 @@
       ],
       "@nx-arch-example/app1/home/feature-shell": [
         "libs/app1/home/feature-shell/src/index.ts"
+      ],
+      "@nx-arch-example/app1/role-management/feature-shell": [
+        "libs/app1/role-management/feature-shell/src/index.ts"
+      ],
+      "@nx-arch-example/app1/role-management/data-access": [
+        "libs/app1/role-management/data-access/src/index.ts"
+      ],
+      "@nx-arch-example/app1/role-management/list-roles": [
+        "libs/app1/role-management/list-roles/src/index.ts"
       ]
     }
   },

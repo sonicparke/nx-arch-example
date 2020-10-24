@@ -23,6 +23,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'role-management',
+    loadChildren: () =>
+      import('@nx-arch-example/app1/role-management/feature-shell').then(
+        (module) => module.App1RoleManagementFeatureShellModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'home',
   },

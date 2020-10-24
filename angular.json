@@ -422,6 +422,126 @@
           "style": "scss"
         }
       }
+    },
+    "app1-role-management-feature-shell": {
+      "projectType": "library",
+      "root": "libs/app1/role-management/feature-shell",
+      "sourceRoot": "libs/app1/role-management/feature-shell/src",
+      "prefix": "nx-arch-example",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/app1/role-management/feature-shell/tsconfig.lib.json",
+            "project": "libs/app1/role-management/feature-shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/app1/role-management/feature-shell/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app1/role-management/feature-shell/src/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/app1/role-management/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "app1-role-management-data-access": {
+      "projectType": "library",
+      "root": "libs/app1/role-management/data-access",
+      "sourceRoot": "libs/app1/role-management/data-access/src",
+      "prefix": "nx-arch-example",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/app1/role-management/data-access/tsconfig.lib.json",
+            "project": "libs/app1/role-management/data-access/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/app1/role-management/data-access/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app1/role-management/data-access/src/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/app1/role-management/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "app1-role-management-list-roles": {
+      "projectType": "library",
+      "root": "libs/app1/role-management/list-roles",
+      "sourceRoot": "libs/app1/role-management/list-roles/src",
+      "prefix": "nx-arch-example",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/app1/role-management/list-roles/tsconfig.lib.json",
+            "project": "libs/app1/role-management/list-roles/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/app1/role-management/list-roles/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app1/role-management/list-roles/src/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/app1/role-management/list-roles/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

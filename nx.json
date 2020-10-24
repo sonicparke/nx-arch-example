@@ -54,6 +54,15 @@
     },
     "app1-home-feature-shell": {
       "tags": []
+    },
+    "app1-role-management-feature-shell": {
+      "tags": []
+    },
+    "app1-role-management-data-access": {
+      "tags": []
+    },
+    "app1-role-management-list-roles": {
+      "tags": []
     }
   }
 }
