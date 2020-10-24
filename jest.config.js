@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/libs/shared/utils',
     '<rootDir>/libs/app1/user-management/feature-shell',
     '<rootDir>/libs/app1/user-management/data-access',
+    '<rootDir>/libs/app1/user-management/list-users',
   ],
 };

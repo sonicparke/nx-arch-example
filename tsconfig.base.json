@@ -22,6 +22,9 @@
       ],
       "@nx-arch-example/app1/user-management/data-access": [
         "libs/app1/user-management/data-access/src/index.ts"
+      ],
+      "@nx-arch-example/app1/user-management/list-users": [
+        "libs/app1/user-management/list-users/src/index.ts"
       ]
     }
   },

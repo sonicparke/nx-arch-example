@@ -45,6 +45,9 @@
     },
     "app1-user-management-data-access": {
       "tags": []
+    },
+    "app1-user-management-list-users": {
+      "tags": []
     }
   }
 }
