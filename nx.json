@@ -63,6 +63,9 @@
     },
     "app2-home-feature-shell": {
       "tags": []
+    },
+    "shared-ui": {
+      "tags": []
     }
   }
 }

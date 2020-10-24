@@ -43,7 +43,8 @@
       ],
       "@nx-arch-example/app2/home/feature-shell": [
         "libs/app2/home/feature-shell/src/index.ts"
-      ]
+      ],
+      "@nx-arch-example/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -12,5 +12,6 @@ module.exports = {
     '<rootDir>/libs/app1/role-management/data-access',
     '<rootDir>/libs/app1/role-management/list-roles',
     '<rootDir>/libs/app2/home/feature-shell',
+    '<rootDir>/libs/shared/ui',
   ],
 };
