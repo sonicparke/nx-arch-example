@@ -40,6 +40,9 @@
       ],
       "@nx-arch-example/app1/role-management/list-roles": [
         "libs/app1/role-management/list-roles/src/index.ts"
+      ],
+      "@nx-arch-example/app2/home/feature-shell": [
+        "libs/app2/home/feature-shell/src/index.ts"
       ]
     }
   },

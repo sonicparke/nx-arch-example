@@ -60,6 +60,9 @@
     },
     "app1-role-management-list-roles": {
       "tags": []
+    },
+    "app2-home-feature-shell": {
+      "tags": []
     }
   }
 }

@@ -542,6 +542,44 @@
           "style": "scss"
         }
       }
+    },
+    "app2-home-feature-shell": {
+      "projectType": "library",
+      "root": "libs/app2/home/feature-shell",
+      "sourceRoot": "libs/app2/home/feature-shell/src",
+      "prefix": "nx-arch-example",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/app2/home/feature-shell/tsconfig.lib.json",
+            "project": "libs/app2/home/feature-shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/app2/home/feature-shell/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/app2/home/feature-shell/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/app2/home/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
