@@ -36,6 +36,9 @@
     "app2-e2e": {
       "tags": [],
       "implicitDependencies": ["app2"]
+    },
+    "shared-utils": {
+      "tags": []
     }
   }
 }
