@@ -6,93 +6,70 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
-## Quick Start & Documentation
+## Commands run to create this type of structure:
 
-[Nx Documentation](https://nx.dev/angular)
+## App1
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+### Routing
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
+`nx g m app-routing --flat --project=app1`
 
-## Adding capabilities to your workspace
+### User Management
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+`nx g @nrwl/angular:lib feature-shell --style=scss --routing --lazy --parentModule=/apps/app1/src/app/app.module.ts --publishable --importPath="@nx-arch-example/app1/users/feature-shell" --directory=app1/user-management`
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+`nx g component user-management --style=scss --export --project=app1-user-management-feature-shell`
 
-Below are our core plugins:
+`nx g @nrwl/angular:lib data-access --directory=app1/user-management --publishable --style=scss --importPath="@nx-arch-example/app1/user-management/data-access"`
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+`nx g service users --project=app1-user-management-data-access --flat=false`
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+`nx g @nrwl/angular:lib list-users --directory=app1/user-management --publishable --style=scss --importPath="@nx-arch-example/app1/user-management/list-users"`
 
-## Generate an application
+`nx g component list-users --style=scss --export --project=app1-user-management-list-users`
 
-Run `ng g @nrwl/angular:app my-app` to generate an application.
+### Role Management
 
-> You can use any of the plugins above to generate applications as well.
+`nx g @nrwl/angular:lib feature-shell --style=scss --routing --lazy --parentModule=/apps/app1/src/app/app.module.ts --publishable --importPath="@nx-arch-example/app1/role-management/feature-shell" --directory=app1/role-management`
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+`nx g component role-management --style=scss --export --project=app1-role-management-feature-shell`
 
-## Generate a library
+`nx g @nrwl/angular:lib data-access --directory=app1/role-management --publishable --style=scss --importPath="@nx-arch-example/app1/role-management/data-access"`
 
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
+`nx g service roles --project=app1-role-management-data-access --flat=false`
 
-> You can also use any of the plugins above to generate libraries as well.
+`nx g @nrwl/angular:lib list-roles --directory=app1/role-management --publishable --style=scss --importPath="@nx-arch-example/app1/role-management/list-roles"`
 
-Libraries are sharable across libraries and applications. They can be imported from `@nx-arch-example/mylib`.
+`nx g component list-roles --style=scss --export --project=app1-role-management-list-roles`
 
-## Development server
+### Home
 
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+`nx g @nrwl/angular:lib feature-shell --style=scss --routing --lazy --parentModule=/apps/app1/src/app/app.module.ts --publishable --importPath="@nx-arch-example/app1/home/feature-shell" --directory=app1/home`
 
-## Code scaffolding
+`nx g component home --style=scss --export --project=app1-home-feature-shell`
 
-Run `ng g component my-component --project=my-app` to generate a new component.
+## App2
 
-## Build
+### Routing
 
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`nx g m app-routing --flat --project=app2`
 
-## Running unit tests
+### Home
 
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+`nx g @nrwl/angular:lib feature-shell --style=scss --routing --lazy --parentModule=/apps/app2/src/app/app.module.ts --publishable --importPath="@nx-arch-example/app2/home/feature-shell" --directory=app2/home`
 
-Run `nx affected:test` to execute the unit tests affected by a change.
+`nx g component home --style=scss --export --project=app2-home-feature-shell`
 
-## Running end-to-end tests
+## Shared
 
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+### Shared Utils
 
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
+`nx g @nrwl/angular:lib utils --directory=shared --publishable --importPath="@nx-arch-example/shared/utils" --style=scss`
 
-## Understand your workspace
+`nx g service date --project=shared-utils --flat=false`
 
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+### Share UI
 
-## Further help
+`nx g @nrwl/angular:lib ui --directory=shared --publishable --importPath="@nx-arch-example/shared/ui" --style=scss`
 
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-## ☁ Nx Cloud
-
-### Computation Memoization in the Cloud
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+`nx g c hello --project=shared-ui --style=scss --export`
